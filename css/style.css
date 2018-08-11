@@ -47,7 +47,7 @@ h1 span {
   margin-top: 50px;
 }
 .content-block h2 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .content-block__effect {
@@ -60,4 +60,25 @@ h1 span {
 .btn-block {
   display: flex;
   justify-content: space-between;
+}
+
+.btn-hover-effect {
+  display: flex;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.btn-hover-effect:nth-child(1) {
+  background-color: #880044;
+}
+.btn-hover-effect:nth-child(2) {
+  background-color: #28AFB0;
+}
+.btn-hover-effect:nth-child(3) {
+  background-color: #D78521;
+}
+.btn-hover-effect:nth-child(4) {
+  background-color: #745296;
+}
+.btn-hover-effect:nth-child(5) {
+  background-color: #3E8914;
 }

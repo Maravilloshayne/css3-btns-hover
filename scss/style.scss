@@ -1,6 +1,12 @@
 //VARIABLES
 $accent-theme-color: #119DA4;
 
+$btn-bg-1: #880044;
+$btn-bg-2: #28AFB0;
+$btn-bg-3: #D78521;
+$btn-bg-4: #745296;
+$btn-bg-5: #3E8914;
+
 //MIXINS
 
 //transitions mixin
@@ -82,7 +88,7 @@ h1 {
   margin-top: 50px;
   
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 
@@ -97,4 +103,30 @@ h1 {
 .btn-block {
   display: flex;
   justify-content: space-between;
+}
+
+.btn-hover-effect {
+  display: flex;
+  color: #fff;
+  letter-spacing: 1px;
+  
+  &:nth-child(1) {
+    background-color: $btn-bg-1;
+  }
+  
+  &:nth-child(2) {
+    background-color: $btn-bg-2;
+  }
+  
+  &:nth-child(3) {
+    background-color: $btn-bg-3;
+  }
+  
+  &:nth-child(4) {
+    background-color: $btn-bg-4;
+  }
+  
+  &:nth-child(5) {
+    background-color: $btn-bg-5;
+  }
 }
