@@ -9,3 +9,16 @@ body {
   margin: 70px auto 0px auto;
   text-align: center;
 }
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 35px;
+}
+h1 span {
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+  -webkit-text-decoration: underline wavy;
+          text-decoration: underline wavy;
+  color: #119DA4;
+}

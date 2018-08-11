@@ -1,3 +1,8 @@
+//VARIABLES
+$accent-theme-color: #119DA4;
+
+//MIXINS
+
 //transitions mixin
 @mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
   transition-property: $property;
@@ -15,8 +20,6 @@
   bottom: $bottom;
 }
 
-// font-family: 'Bad Script', cursive;
-
 /* common styles !!!YOU DON'T NEED THEM  */
 body {
   font: {
@@ -29,4 +32,22 @@ body {
   width: 850px;
   margin: 70px auto 0px auto;
   text-align:  center;
+}
+
+  h1 {
+    margin: 0;
+    
+    font: {
+      weight: 400;
+      size: 35px;
+    }
+    
+    span {
+      font: {
+        family: 'Bad Script', cursive;
+        weight: bold;
+      }
+      text-decoration: underline wavy;
+      color: $accent-theme-color;
+    }
 }
