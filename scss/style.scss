@@ -77,3 +77,24 @@ h1 {
     }
   }
 }
+
+.content-block {
+  margin-top: 50px;
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.content-block__effect {
+  margin-bottom: 30px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+}

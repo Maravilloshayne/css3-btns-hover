@@ -42,3 +42,22 @@ h1 span {
   color: #119DA4;
   margin-right: 5px;
 }
+
+.content-block {
+  margin-top: 50px;
+}
+.content-block h2 {
+  margin-bottom: 10px;
+}
+
+.content-block__effect {
+  margin-bottom: 30px;
+}
+.content-block__effect:last-child {
+  margin-bottom: 0;
+}
+
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+}
