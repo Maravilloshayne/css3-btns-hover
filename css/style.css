@@ -22,3 +22,23 @@ h1 span {
           text-decoration: underline wavy;
   color: #119DA4;
 }
+
+.link {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 30px auto 0;
+}
+.link a {
+  margin-right: 20px;
+  color: #1f1f1f;
+  font-size: 17px;
+  display: inline-block;
+}
+.link a:last-child {
+  margin-right: 0;
+}
+.link a i {
+  color: #119DA4;
+  margin-right: 5px;
+}

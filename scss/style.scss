@@ -34,20 +34,46 @@ body {
   text-align:  center;
 }
 
-  h1 {
-    margin: 0;
-    
+h1 {
+  margin: 0;
+
+  font: {
+    weight: 400;
+    size: 35px;
+  }
+
+  span {
     font: {
-      weight: 400;
-      size: 35px;
+      family: 'Bad Script', cursive;
+      weight: bold;
     }
+    text-decoration: underline wavy;
+    color: $accent-theme-color;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 30px auto 0;
+
+  a {
+    margin-right: 20px;
     
-    span {
-      font: {
-        family: 'Bad Script', cursive;
-        weight: bold;
-      }
-      text-decoration: underline wavy;
-      color: $accent-theme-color;
+    color: #1f1f1f;
+    font: {
+      size: 17px;
     }
+    display: inline-block;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    i {
+      color: $accent-theme-color;
+      margin-right: 5px
+    }
+  }
 }
