@@ -97,11 +97,7 @@ h1 {
 }
 
 .content-block__effect {
-  margin-bottom: 30px;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-bottom: 50px;
 }
 
 .btn-block {
@@ -155,14 +151,12 @@ h1 {
   padding: $btn-hover-effect-padding-vert $btn-hover-effect-padding-horz;
   
   text-decoration: none;
+  
+  overflow: hidden;
 }
 
 /* effect 1 styles */
-.btn-hover-effect--effect-1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  
+.btn-hover-effect--effect-1 {  
   transform: translateZ(0);
   
   /* overlay block styles */
@@ -205,7 +199,6 @@ h1 {
     line-height: inherit;
     
     opacity: 0;
-    visibility: hidden;
   }
   
   //hover styles
@@ -223,7 +216,75 @@ h1 {
       right: 0;
       
       opacity: 1;
-      visibility: visible;
+    }
+  }
+  
+}
+
+/* effect #2 */
+.btn-hover-effect--effect-2 {
+   transform: translateZ(0);
+  
+  /* overlay styles */
+  &:before {
+   @include position-absolute($top: 50%, $left: 50%);
+   @include transition-mix($property: transform);
+    
+    display: block;
+    width: 200%;
+    height: 200%;
+    
+    content: '';
+    
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center top;
+    
+    background-color: rgba(255,255,255, .2);
+    border-radius: 50%;
+   
+    z-index: -1;
+  }
+  
+  /* icon styles */
+  &:after {
+    @include position-absolute($top: 1px, $right: 0);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: $icon-block-width;
+    
+    content: '\f105';
+    
+    font: {
+      family: "Font Awesome 5 Free";
+      size: 25px;
+      weight: 900;
+    }
+    line-height: inherit;
+    
+    transform: scale(1.3);
+    
+    opacity: 0;
+  }
+  
+  &:hover {
+    padding-left: $btn-hover-effect-padding-horz - 10;
+    padding-right: $btn-hover-effect-padding-horz + 10;
+    
+    &:before {
+      transform: translate(-50%, -50%) scale(1);
+
+      transform-origin: center bottom;
+    }
+    
+    &:after {
+      @include transition-mix();
+      
+      transform: scale(1);
+      
+      opacity: 1;
     }
   }
   
