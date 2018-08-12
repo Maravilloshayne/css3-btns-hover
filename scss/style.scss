@@ -40,7 +40,7 @@ body {
 
 .container {
   width: 950px;
-  margin: 70px auto 0px auto;
+  margin: 50px auto 0px auto;
   text-align:  center;
 }
 
@@ -147,8 +147,9 @@ h1 {
   
   display: flex;
   align-items: center;
-  
   padding: $btn-hover-effect-padding-vert $btn-hover-effect-padding-horz;
+  
+  transform: translateZ(0);
   
   text-decoration: none;
   
@@ -157,7 +158,6 @@ h1 {
 
 /* effect 1 styles */
 .btn-hover-effect--effect-1 {  
-  transform: translateZ(0);
   
   /* overlay block styles */
   &:before {
@@ -223,7 +223,6 @@ h1 {
 
 /* effect #2 */
 .btn-hover-effect--effect-2 {
-   transform: translateZ(0);
   
   /* overlay styles */
   &:before {
@@ -264,7 +263,7 @@ h1 {
     }
     line-height: inherit;
     
-    transform: scale(1.3);
+    transform: scale(1.5);
     
     opacity: 0;
   }
@@ -292,7 +291,6 @@ h1 {
 
 /* effect #3 */
 .btn-hover-effect--effect-3 {
-  transform: translateZ(0);
   
   /* overlay styles */
   &:before{
@@ -308,7 +306,7 @@ h1 {
     transform: scale(1, 0);
     transform-origin: center bottom;
     
-    background-color: rgba(255,255,255, .1);
+    background-color: rgba(255,255,255, .15);
     
     z-index: -1;
   }
@@ -328,7 +326,7 @@ h1 {
     
     font: {
       family: "Font Awesome 5 Free";
-      size: 25px;
+      size: 30px;
       weight: 900;
     }
     line-height: inherit;
@@ -337,7 +335,7 @@ h1 {
     transform: scale(1, 0);
     transform-origin: center bottom;
     
-    background-color: rgba(255,255,255, .1);
+    background-color: rgba(255,255,255, .15);
   }
   
   &:hover {
@@ -363,10 +361,9 @@ h1 {
 
 /* effect #4 */
 .btn-hover-effect--effect-4 {
-  transform: translateZ(0);
   
   /* overlay styles */
-  &:before{
+  &:before {
    @include position-absolute($top: 0, $left: 0);
    @include transition-mix($property: transform);
     
@@ -400,15 +397,13 @@ h1 {
     
     font: {
       family: "Font Awesome 5 Free";
-      size: 25px;
+      size: 30px;
       weight: 900;
     }
     line-height: inherit;
     color: transparent;
     
-    transform: scale(2);
-    
-    background-color: rgba(255,255,255, .1);
+    transform: scale(1.4);
   }
   
   &:hover {
@@ -425,6 +420,83 @@ h1 {
       color: #fff;
       
       transform: scale(1);
+    }
+  }
+}
+
+/* effect #5 */
+.btn-hover-effect--effect-5 {
+  
+  /* overlay styles */
+  &:before {
+   @include position-absolute($top: 50%, $left: 50%);
+   @include transition-mix($property: transform);
+    
+    display: block;
+    width: 300px;
+    height: 300px;
+    
+    content: '';
+    
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    
+    background-color: rgba(255,255,255, .15);
+    border-radius: 50%;
+    
+    z-index: -1;
+  }
+  
+  /* icon styles */
+  &:after {
+    @include position-absolute($top: 50%, $left: 50%);
+    transition: transform .2s linear .2s, opacity .2s linear .2s;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    
+    content: '\f30b';
+    
+    font: {
+      family: "Font Awesome 5 Free";
+      size: 30px;
+      weight: 900;
+    }
+    line-height: inherit;
+    color: transparent;
+    
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    
+    background-color: rgba(255,255,255, .15);
+    border-radius: 50%;
+    opacity: 0;
+    
+    z-index: -1;
+  }
+  
+  &:hover {
+    
+    color: transparent;
+    
+    &:before {
+      transition-duration: .15s;
+      
+      transform: translate(-50%, -50%) scale(1);
+      
+      opacity: 1;
+    }
+    
+    &:after {
+      transition-duration: .15s;
+      
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      
+      color: #fff;
     }
   }
 }
